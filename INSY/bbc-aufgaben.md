@@ -43,7 +43,7 @@
       ```sql
       SELECT
           name,
-          ROUND(population / 1000000) AS "Bevölkerung (Mio.)"
+          ROUND(population / 1000000) AS "Bevölkerung Mio."
       FROM
           bbc
       WHERE
@@ -127,7 +127,7 @@
        ```sql
        SELECT
            region,
-           COUNT(name) AS "Anzahl Länder (> 10 Mio. Ew.)"
+           COUNT(name) AS "> 10 Mio. Ew."
        FROM
            bbc
        WHERE
