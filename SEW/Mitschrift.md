@@ -1,3 +1,15 @@
+# Forward- vs. Reverse- Engineering in UML
+## Forward Engineering:
+Aus dem erstellten UML – Diagramm wird der (Java -) Source Code entwickelt.
+
+## Reverse Engineering:
+Aus dem bereits entwickelten (Java -) Source Code wird ein UML – Diagramm generiert.
+
+In der Praxis kommt meist eine Mischform der beiden Techniken zum Einsatz: So wird die grobe Klassenstruktur häufig in UML entwickelt, anschließend mittels Forward Engineering der Source code generiert. In weiterer Folge werden z.B. Methoden direkt im Source Code ergänzt und das UML – Diagramm anschließend mittels Reverse Engineering entsprechen aktualisiert.
+# Vererbung
+Eines der Kernprinzipien der objektorientierten Programmierung ist die Vererbung (inheritance), erlaubt es existierenden Code wiederzuverwenden oder eine bestehende Klasse zu erweitern. Klassen können von anderen Klassen abgeleitet werden und erben damit alle Eigenschaften und Methoden der Oberklasse.
+In Java kann eine Klasse nur von einer Oberklasse aberben. (einfach Vererbung)
+In Java: public class Airplane extends Aircraft {}
 # Vererbung - super
 
 Zum Ausführen der ursprünglichen Methode in der abgeleiteten Klasse wird in der der überschreibenden Methode das Schlüsselwort "super" verwendet.
@@ -86,7 +98,7 @@ Während bei Vererbung eine Spezialisierung abgebildet wird (z.B. Circle ist ein
 
 Da eine Klasse mehrere Funktionalitäten besitzen kann, können mehrere Interfaces implementiert werden.
 
-Mit einem Interface wird für ein Objekt beschrieben, was es kann. Im Gegensatz dazu wird mit Vererbung für ein Objekt beschrieben, was es ist. 
+Mit einem Interface wird für ein Objekt beschrieben, was es kann. Im Gegensatz dazu wird mit Vererbung für ein Objekt beschrieben, was es ist.  
 
 <u>Beispiel:</u>
 
