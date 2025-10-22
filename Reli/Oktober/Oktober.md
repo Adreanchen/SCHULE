@@ -32,4 +32,27 @@ Medikamentöser Abbruch:
 Chirurgischer Abbruch:
 * Vorteile: bekommt kaum was mit(weniger Schmerzen), überwacht(nicht allein), sicherer -> "schneller" 
 * Nachteile: nicht Human, Risiko, Infektionen, Narkose
+## Gentechnik
+**Was ist Gentechnik?**
+
+Gentechnik ist die gezielte Veränderung des Erbguts (DNA) eines Organismus, um diesem neue, gewünschte Eigenschaften zu verleihen.
+
+| Vorteile von Gentechnik                            | Nachteile von Gentechnik                      |
+| -------------------------------------------------- | --------------------------------------------- |
+| Medizinische Durchbrüche (z.B. Insulinproduktion)  | Unvorhersehbare ökologische Risiken           |
+| Erhöhung der Ernteerträge und Widerstandsfähigkeit | Ethische Bedenken                             |
+| Grundlagenforschung und Krankheitsverständnis      | Abhängigkeit von großen Konzernen (Landwirte) |
+| Entwicklung neuer Materialien und Bio-Kraftstoffe  | Mögliche gesundheitliche Risiken (Allergien)  |
+
+**Auswirkung auf den Menschen/Gesellschaft?**
+
+
+
+
+
+
+
+
+
+
 
