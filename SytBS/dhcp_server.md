@@ -43,13 +43,13 @@ vi /etc/network/interfaces
 
 Change this line (or comment it out):
 `````bash
-iface enq0s3 inet dhcp
+iface enp0s3 inet dhcp
 `````
 
 To this:
 
 ```bash
-iface enq0s3 inet static
+iface enp0s3 inet static
 		address 10.0.5.--/24
 		gateway 10.0.5.1
 ```
