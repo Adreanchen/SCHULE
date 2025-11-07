@@ -30,5 +30,16 @@
 
 ### Performing
 
-* 
-* **Teamleiter:** 
+* Das Team performant, ist leistungsfähig. 
+* **Teamleiter:** Performingsphase beibehalten
+
+## Adjourning
+
+* Das Team löst sich auf und neue Teams entstehen. Und wenn sie nicht gestorben sind, dann leben sie noch heute. 
+
+
+
+
+
+
+
