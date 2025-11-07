@@ -46,13 +46,3 @@ Gentechnik ist die gezielte Veränderung des Erbguts (DNA) eines Organismus, um 
 
 **Auswirkung auf den Menschen/Gesellschaft?**
 
-
-
-
-
-
-
-
-
-
-
