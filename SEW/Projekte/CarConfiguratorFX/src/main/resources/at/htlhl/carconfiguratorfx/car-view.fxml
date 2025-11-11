@@ -43,8 +43,8 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-            <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <TextField alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <Label alignment="CENTER_RIGHT" text="Manufacture" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
