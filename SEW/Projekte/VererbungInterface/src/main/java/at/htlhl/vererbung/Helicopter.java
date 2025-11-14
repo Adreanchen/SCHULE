@@ -1,6 +1,6 @@
 package at.htlhl.vererbung;
 
-public class Helicopter extends Aircraft {
+public class Helicopter extends Aircraft implements Rentable {
     private float rotorBladeSize;
 
     public Helicopter() {
@@ -17,5 +17,11 @@ public class Helicopter extends Aircraft {
 
     public void land() {
         System.out.println("An Helicopter is landing.  ");
+    }
+
+    @Override
+    public boolean isRentable() {
+        System.out.println("An Helicopter is rentable!");
+        return true;
     }
 }

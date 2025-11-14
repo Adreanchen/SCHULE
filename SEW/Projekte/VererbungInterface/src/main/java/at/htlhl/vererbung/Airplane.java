@@ -1,6 +1,6 @@
 package at.htlhl.vererbung;
 
-public class Airplane extends Aircraft {
+public class Airplane extends Aircraft implements Rentable {
     private float wingSpan;
     public Airplane() {
         this.wingSpan = 15.7f;
@@ -18,4 +18,9 @@ public class Airplane extends Aircraft {
         System.out.println("An Airplane is landing.");
     }
 
+    @Override
+    public boolean isRentable() {
+        System.out.println("An airplane is not rentable!");
+        return false;
+    }
 }
