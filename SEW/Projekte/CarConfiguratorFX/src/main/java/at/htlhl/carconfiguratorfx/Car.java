@@ -2,8 +2,8 @@ package at.htlhl.carconfiguratorfx;
 
 public class Car {
 
-    public static final int MAX_POWER = 200;
-    public static final int MAX_RANGE = 1000;
+    public static final int MAX_POWER = 100;
+    public static final int MAX_RANGE = 925;
 
     private String manufacturer = "";
     private String type = "";
