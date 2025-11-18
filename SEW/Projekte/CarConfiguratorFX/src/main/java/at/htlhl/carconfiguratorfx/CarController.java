@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 
 public class CarController {
 
+    
     @FXML
     private TextField manufacturerTextField;
 
@@ -24,7 +25,7 @@ public class CarController {
 
     }
 
-    public void init(Car model) {
+/*    public void init(Car model) {
         this.model = model;
 
         rangeSlider.setMax(Car.MAX_RANGE);
@@ -35,5 +36,7 @@ public class CarController {
         powerSlider.setValue(model.getPower());
         rangeSlider.setValue(model.getRange());
     }
+
+ */
 
 }

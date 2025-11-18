@@ -48,4 +48,14 @@ public class Car {
     public void setRange(int range) {
         this.range = range;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", type='" + type + '\'' +
+                ", power=" + power +
+                ", range=" + range +
+                '}';
+    }
 }
