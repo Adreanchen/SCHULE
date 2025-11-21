@@ -3,9 +3,15 @@ package at.htlhl.carconfiguratorfx;
 import javafx.fxml.FXML;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 
 public class CarController {
 
+    @FXML
+    private Button saveButton;
+
+    @FXML
+    private Button loadButton;
 
     @FXML
     private TextField manufacturerTextField;
@@ -39,4 +45,19 @@ public class CarController {
 
  */
 
+    public void init() {
+        model = new Car();
+
+        rangeSlider.setMax(Car.MAX_RANGE);
+        powerSlider.setMax(Car.MAX_POWER);
+
+        assignModelDefaults();
+    }
+
+    private void assignModelDefaults() {
+        model.setManufacturer("");
+        model.setType("");
+        model.setPower(0);
+        model.setRange(100);
+    }
 }
