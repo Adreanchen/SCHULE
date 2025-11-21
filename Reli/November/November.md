@@ -41,3 +41,19 @@
 [**6_Patientenverfügung.pdf**](./6_Patientenverfügung.pdf)
 
 [**Euthanasie_Ethik.pdf**](./Euthanasie_Ethik.pdf)
+
+## Trauer
+
+![Dinge die man nicht machen sollte beim Trauern](TRAUER/die-schlimmsten-trauerfloskeln-postkarte.jpg)
+
+![](TRAUER/postkarte-boxring-rgb.jpg)
+
+![](TRAUER/bullshit_bingo_rgb.jpg)
+
+### :duck: ​Film: Ente, Tod und Tulpe 
+
+**Inhalt:** eine Ente wird vom Tod begleitet bis sie dann "stirbt" und auf dem Weg dabei macht sie die Dinge die sie noch machen will (und der "Tod" verzichtet mehr oder weniger darauf dass er die Ente mitnimmt)
+
+**Aussage:** mach dass was die noch Spaß macht
+
+**Meine Gedanken:** 
