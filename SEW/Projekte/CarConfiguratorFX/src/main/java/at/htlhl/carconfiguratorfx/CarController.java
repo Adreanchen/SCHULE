@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 
 public class CarController {
 
-    
+
     @FXML
     private TextField manufacturerTextField;
 
