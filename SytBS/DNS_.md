@@ -25,7 +25,7 @@ nslookup
 
 > server # zeigt den aktuellen an
 > server <ip-addresse vom NameServer> # switched zu dem NS server
-> set type=NS # einf machen
+> set type=NS <name von welchen server welcher dns zuständig is> <eigentlich keine ahnung> # einf machen
 > ac.at. # gibt die zurück wo das hald vorkommt (geht auch mit at. oder de. oder htl-hl.ac.at. ...)
 ```
 
