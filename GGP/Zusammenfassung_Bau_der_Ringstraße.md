@@ -66,13 +66,13 @@ Mit der Zeit entwickelte sich die Ringstraße zum **politischen, kulturellen und
 
 Auch heute spielt sie eine zentrale Rolle im Stadtbild. Viele wichtige Einrichtungen, Ministerien und Museen liegen an der Ringstraße, und sie ist ein beliebtes Ziel für Touristinnen und Touristen aus aller Welt.
 
-## **Fazit**
+## (**Fazit**
 
 Der Bau der Wiener Ringstraße war eines der größten städtebaulichen Projekte Europas im 19. Jahrhundert. Sie steht für den Wandel Wiens von einer geschlossenen Festungsstadt zu einer offenen, modernen Metropole.
 
 Mit ihrer beeindruckenden Architektur, ihrer historischen Bedeutung und ihrem gesellschaftlichen Einfluss ist die Ringstraße bis heute ein Symbol für **Wien, die Hauptstadt der Kultur, Kunst und Geschichte**.
 
-Wer heute entlang der Ringstraße spaziert, bewegt sich also durch eine lebendige Geschichtsschreibung – ein Monument des Fortschritts, der Macht und der Schönheit.
+Wer heute entlang der Ringstraße spaziert, bewegt sich also durch eine lebendige Geschichtsschreibung – ein Monument des Fortschritts, der Macht und der Schönheit.**)**
 
 ## **Quellen**
 
@@ -80,3 +80,4 @@ Wer heute entlang der Ringstraße spaziert, bewegt sich also durch eine lebendig
 * Wien Info: [https://www.wien.info/de/kunst-kultur/architektur/ringstrasse-356766](https://www.wien.info/de/kunst-kultur/architektur/ringstrasse-356766?utm_source=chatgpt.com) [vienna.info](https://www.wien.info/de/kunst-kultur/architektur/ringstrasse-356766?utm_source=chatgpt.com)
 * Wikipedia: [https://de.wikipedia.org/wiki/Wiener_Ringstra%C3%9Fe](https://de.wikipedia.org/wiki/Wiener_Ringstraße?utm_source=chatgpt.com) [Wikipedia](https://de.wikipedia.org/wiki/Wiener_Ringstraße?utm_source=chatgpt.com)
 * Wikisource: [https://de.wikisource.org/wiki/Wanderungen_durch_Wien/Ringstra%C3%9Fe_und_Stadterweiterung](https://de.wikisource.org/wiki/Wanderungen_durch_Wien/Ringstraße_und_Stadterweiterung?utm_source=chatgpt.com) [de.wikisource.org](https://de.wikisource.org/wiki/Wanderungen_durch_Wien/Ringstraße_und_Stadterweiterung?utm_source=chatgpt.com)
+

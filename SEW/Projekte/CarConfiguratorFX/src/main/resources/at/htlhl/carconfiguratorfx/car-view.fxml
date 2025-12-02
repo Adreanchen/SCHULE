@@ -15,8 +15,8 @@
    <top>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
-          <Button mnemonicParsing="false" text="Load" />
-            <Button mnemonicParsing="false" text="Save" />
+          <Button mnemonicParsing="false" onAction="#loadAction" text="Load" />
+            <Button mnemonicParsing="false" onAction="#saveAction" text="Save" />
         </items>
       </ToolBar>
    </top>
@@ -67,7 +67,7 @@
             </Label>
             <Slider fx:id="powerSlider" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
             <Slider fx:id="rangeSlider" majorTickUnit="275.0" max="925.0" min="100.0" showTickLabels="true" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <Button alignment="CENTER" mnemonicParsing="false" text="Tune" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#tuneAction" text="Tune" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
          </children>
       </GridPane>
    </center>

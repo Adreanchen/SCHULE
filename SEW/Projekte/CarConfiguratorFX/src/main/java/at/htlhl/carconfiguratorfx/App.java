@@ -15,7 +15,7 @@ public class App extends Application {
     public static final String APP_NAME ="CarConfiguratorFX";
     public static final String CONFIG_DIR_PATH = System.getProperty("user.dir") + "/." + APP_NAME;
     public static final String MODEL_FILE_PATH = CONFIG_DIR_PATH + "/car.json";
-    public static final ObjectMapper JSON_Mapper = new ObjectMapper();
+    public static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
 
     private static Scene scene;

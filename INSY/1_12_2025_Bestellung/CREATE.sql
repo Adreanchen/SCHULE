@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXITS OShop;
+USE OShop;
+
+CREATE TABLE Kunde (
+	KundenID INT PRIMARY KEY AUTO_INCREMENT,
+	Kundenname varchar(255),
+	Kundenemail varchar(255)
+)
+
+CREATE TABL
