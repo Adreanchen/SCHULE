@@ -1,1 +1,6 @@
-{"manufacturer":"VW","type":"Golf 1","power":64,"range":600}
+{
+  "manufacturer" : "Porsche",
+  "type" : "911 Carrera",
+  "power" : 100,
+  "range" : 600
+}
