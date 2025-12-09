@@ -75,10 +75,10 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "manufacturer='" + manufacturerProperty.get() + '\'' +
-                ", type='" + typeProperty.get() + '\'' +
-                ", power=" + powerProperty.get() +
-                ", range=" + rangeProperty.get() +
+                "manufacturer='" + getManufacturer() + '\'' +
+                ", type='" + getType() + '\'' +
+                ", power=" + getPower() +
+                ", range=" + getRange() +
                 '}';
     }
 }
