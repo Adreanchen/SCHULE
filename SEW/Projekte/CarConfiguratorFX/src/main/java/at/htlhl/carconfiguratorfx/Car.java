@@ -31,54 +31,54 @@ public class Car {
     // private int range = 0;
     private final IntegerProperty rangeProperty = new SimpleIntegerProperty(this, "range");
 
-    
+
 
     public Car() {
 
     }
 
     public String getManufacturer() {
-        return manufacturer;
+        return manufacturerProperty.get();
     }
 
     public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+        manufacturerProperty.set(manufacturer);
     }
 
     public String getType() {
-        return type;
+        return typeProperty.get();
     }
 
     public void setType(String type) {
-        this.type = type;
+        typeProperty.set(type);
     }
 
     public int getPower() {
-        return power;
+        return powerProperty.get();
     }
 
     public void setPower(int power) {
         if (power > Car.MAX_POWER) {
-            this.power = Car.MAX_POWER;
+            powerProperty.set(Car.MAX_POWER);
         }
-        this.power = power;
+        powerProperty.set(power);
     }
 
     public int getRange() {
-        return range;
+        return rangeProperty.get();
     }
 
     public void setRange(int range) {
-        this.range = range;
+        rangeProperty.set(range);
     }
 
     @Override
     public String toString() {
         return "Car{" +
-                "manufacturer='" + manufacturer + '\'' +
-                ", type='" + type + '\'' +
-                ", power=" + power +
-                ", range=" + range +
+                "manufacturer='" + manufacturerProperty.get() + '\'' +
+                ", type='" + typeProperty.get() + '\'' +
+                ", power=" + powerProperty.get() +
+                ", range=" + rangeProperty.get() +
                 '}';
     }
 }
