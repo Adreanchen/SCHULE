@@ -45,12 +45,20 @@ public class Car {
         manufacturerProperty.set(manufacturer);
     }
 
+    public StringProperty manufacturerProperty() {
+        return  manufacturerProperty;
+    }
+
     public String getType() {
         return typeProperty.get();
     }
 
     public void setType(String type) {
         typeProperty.set(type);
+    }
+
+    public StringProperty typeProperty() {
+        return  typeProperty;
     }
 
     public int getPower() {
@@ -64,12 +72,20 @@ public class Car {
         powerProperty.set(power);
     }
 
+    public IntegerProperty powerProperty() {
+        return  powerProperty;
+    }
+
     public int getRange() {
         return rangeProperty.get();
     }
 
     public void setRange(int range) {
         rangeProperty.set(range);
+    }
+
+    public IntegerProperty rangeProperty() {
+        return  rangeProperty;
     }
 
     @Override

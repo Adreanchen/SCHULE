@@ -60,14 +60,24 @@ public class CarController {
         rangeSlider.setMax(Car.MAX_RANGE);
         powerSlider.setMax(Car.MAX_POWER);
 
+        initBinding();
         assignModelDefaults();
 
+        /*
         manufacturerTextField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
                 System.out.println("Source: " + observableValue + ", oldValue: '" + oldValue + "', newValue: '" + newValue + "'");
             }
         });
+        */
+    }
+
+    private void initBinding() {
+        manufacturerTextField.textProperty().bindBidirectional(model.manufacturerProperty());
+        typeTextField.textProperty().bindBidirectional(model.typeProperty());
+        powerSlider.valueProperty().bindBidirectional(model.powerProperty());
+        rangeSlider.valueProperty().bindBidirectional(model.rangeProperty());
     }
 
     private void assignModelDefaults() {
@@ -77,19 +87,24 @@ public class CarController {
         model.setRange(100);
     }
 
+    /*
     private void updateModelFromView() {
         model.setManufacturer(manufacturerTextField.getText());
         model.setType(typeTextField.getText());
         model.setPower((int) powerSlider.getValue());
         model.setRange((int) rangeSlider.getValue());
     }
+     */
 
+
+    /*
     private void updateViewFromModel() {
         manufacturerTextField.setText(model.getManufacturer());
         typeTextField.setText(model.getType());
         powerSlider.setValue(model.getPower());
         rangeSlider.setValue(model.getRange());
     }
+     */
 
     private void updateModel(Car newModel) {
         model.setManufacturer(newModel.getManufacturer());
@@ -107,7 +122,7 @@ public class CarController {
             try {
                 Car car = App.JSON_MAPPER.readValue(configFile, Car.class);
                 updateModel(car);
-                updateViewFromModel();
+                // updateViewFromModel();
             } catch (IOException ioex) {
                 System.err.println("Reading config file failed: " + ioex.getMessage());
             }
@@ -118,7 +133,7 @@ public class CarController {
     protected void saveAction(ActionEvent event) {
         System.out.println("Save clicked ... " + event.getSource());
 
-        updateModelFromView();
+        // updateModelFromView();
 
         File configFile = new File(App.MODEL_FILE_PATH);
 
