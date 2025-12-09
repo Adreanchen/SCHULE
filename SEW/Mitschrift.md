@@ -6,7 +6,9 @@ Aus dem erstellten UML – Diagramm wird der (Java -) Source Code entwickelt.
 Aus dem bereits entwickelten (Java -) Source Code wird ein UML – Diagramm generiert.
 
 In der Praxis kommt meist eine Mischform der beiden Techniken zum Einsatz: So wird die grobe Klassenstruktur häufig in UML entwickelt, anschließend mittels Forward Engineering der Source code generiert. In weiterer Folge werden z.B. Methoden direkt im Source Code ergänzt und das UML – Diagramm anschließend mittels Reverse Engineering entsprechen aktualisiert.
+
 # Vererbung
+
 Eines der Kernprinzipien der objektorientierten Programmierung ist die Vererbung (inheritance), erlaubt es existierenden Code wiederzuverwenden oder eine bestehende Klasse zu erweitern. Klassen können von anderen Klassen abgeleitet werden und erben damit alle Eigenschaften und Methoden der Oberklasse.
 In Java kann eine Klasse nur von einer Oberklasse aberben. (einfach Vererbung)
 In Java: public class Airplane extends Aircraft {}
@@ -115,4 +117,21 @@ class Circle implements Resizeable {
 	}
 }
 ``````
+
+# Fehlerbehandlung mit Exceptions
+
+## Allgemeines
+
+```java
+try {
+    // int wert = Integer.valueOf("Keine Zahl"); // Number Format Exception
+    int wert = Integer.valueOf("10");
+    ArrayList <String> nameList = null; // NullPointerException
+    nameList.add("Tim");
+} catch (NumberFormatExcept nfex) { // Unchecked exception
+    System.err.println("Can't parse Integer: " + nfex.getMessage());
+} catch (NullPointerException npex) {
+    System.err.println("Nullpointerexception aufgetreten");
+}
+```
 
