@@ -1,14 +1,37 @@
 package at.htlhl.carconfiguratorfx;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+/**
+ * Model
+ *
+ * @author Adrian Fritz
+ */
 public class Car {
 
-    public static final int MAX_POWER = 100;
-    public static final int MAX_RANGE = 925;
+    // Constants **************************************************************
 
-    private String manufacturer = "";
-    private String type = "";
-    private int power = 0;
-    private int range = 0;
+    public static final int MAX_POWER = 200;
+    public static final int MAX_RANGE = 1000;
+
+    // Fields *****************************************************************
+
+    // private String manufacturer = "";
+    private final StringProperty manufacturerProperty = new SimpleStringProperty(this, "manufacturer");
+
+    // private String type = "";
+    private final StringProperty typeProperty = new SimpleStringProperty(this, "type");
+
+    // private int power = 0;
+    private final IntegerProperty powerProperty = new SimpleIntegerProperty(this, "power");
+
+    // private int range = 0;
+    private final IntegerProperty rangeProperty = new SimpleIntegerProperty(this, "range");
+
+    
 
     public Car() {
 
