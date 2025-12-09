@@ -63,14 +63,12 @@ public class CarController {
         initBinding();
         assignModelDefaults();
 
-        /*
-        manufacturerTextField.textProperty().addListener(new ChangeListener<String>() {
+        model.manufacturerProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
                 System.out.println("Source: " + observableValue + ", oldValue: '" + oldValue + "', newValue: '" + newValue + "'");
             }
         });
-        */
     }
 
     private void initBinding() {
