@@ -1,6 +1,7 @@
-name: 1-12-2025-Bestellung
+name: PHP
 type: php
 docroot: ""
+host_db_port: 32909
 php_version: "8.5"
 webserver_type: apache-fpm
 xdebug_enabled: false
@@ -13,7 +14,6 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: false
-host_db_port: 9999
 
 # Key features of DDEV's config.yaml:
 
