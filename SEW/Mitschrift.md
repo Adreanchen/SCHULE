@@ -135,3 +135,30 @@ try {
 }
 ```
 
+Tritt bei der Abarbeitung der Anweisungen des tr-Blocks ein Fehler auf , der eine Exception auslöst, so stoppt die Verarbeitung der Anweisungen im try-Block. Es wird direkt ein auf die Exception ausgelegter catch-Block eingesprungen - sofer ein solcher existiert. Gibt es keinen auf den Typ der Exception passender catch-Block, so wird die Exception so lange an die aufrufenden Methoden weitergegeben (propogiert), bis entweder ein passender catch-Block gefunden oder die main() - Methode erreicht wird und damit die Programmausführung stoppt. 
+
+## Finally
+
+Es gibt bei try-catch einen optionalen finally-Block. Die Anweisungen darin werden immer ausgeführt, egal ob ein Fehler aufgetreten ist oder nicht.
+
+Sinnvoll kann man den finally Block nutzen, um auf jeden Fall benötigte Aufräumarbeiten durchzuführen. 
+
+```java
+BufferedReader br = null;
+try {
+    br = new BufferedReader(new FileReade(filePath));
+    while (br.ready()) {
+        // Aus Datei lesen
+    }
+} catch (FileNotFoundException fnfex) {
+    // Fehlerbehandlung, wenn Datei nicht gefunden
+} catch (IOException ioex) {
+    //Fehlerbehandlung, wenn ein IO Problem aufgetreten ist
+} finally {
+    // "Aufräumen" Stream schließen
+    // egal, ob ein Fehler aufgetreten
+    // ist oder nicht
+    br.close();
+}
+```
+
