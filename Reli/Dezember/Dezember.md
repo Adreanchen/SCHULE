@@ -2,7 +2,7 @@
 
 ## Dietrich Bonhoeffer
 
-[**Dietrich Bonhoeffer**](./1_Bonhoeffer_Aufgaben.pdf)
+[**Dietrich Bonhoeffer**](./1_Bonkhoeffer_Aufgaben.pdf)
 
 | year        | action                                                       |
 | ----------- | ------------------------------------------------------------ |
@@ -20,4 +20,16 @@
 | 1941        | Verbot, etwas zu drucken; Weiterarbeti, Attentate auf Hitler |
 | 1943        | Gefängnis Berlin - Tegel                                     |
 | 1945        | Ermordung im KS Flossenbürg                                  |
+
+## 7 Sakramente
+
+| Sakrament      | Bedeutung                                                 |
+| -------------- | --------------------------------------------------------- |
+| Taufe          | Eintritt in die Glaubensgemeinschaft                      |
+| **Kommunion**  | Verbindung mit Christus                                   |
+| Firmung        | Stärkung durch den hl. Geist / Erwachsenwerden im Glauben |
+| Ehe            | Lebenslange Verbindung von Partnern / unter Gott          |
+| Priesterweihe  | Lebenslanger Bund mit Gott                                |
+| Buße           | Vergebung der Sünden / Erlösung von Bösem                 |
+| Krankensalbung | Stärkung und Trost in schwierigen Zeiten                  |
 
