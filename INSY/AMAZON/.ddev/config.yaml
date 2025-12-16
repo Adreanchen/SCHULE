@@ -1,7 +1,6 @@
-name: PHP
+name: AMAZON
 type: php
 docroot: ""
-host_db_port: 32909
 php_version: "8.5"
 webserver_type: apache-fpm
 xdebug_enabled: false
