@@ -4,9 +4,12 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.stage.Window;
 
 import java.io.File;
 import java.io.IOException;
@@ -120,9 +123,20 @@ public class CarController {
             try {
                 Car car = App.JSON_MAPPER.readValue(configFile, Car.class);
                 updateModel(car);
+
+                throw new IOException("Test Fritz Error");
                 // updateViewFromModel();
             } catch (IOException ioex) {
                 System.err.println("Reading config file failed: " + ioex.getMessage());
+
+                Window ownerWindow = ((Node) event.getTarget()).getScene().getWindow();
+
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.initOwner(ownerWindow);
+                alert.setTitle(App.APP_NAME);
+                alert.setHeaderText("Load failed");
+                alert.setContentText("During loading the configuration an error occurred: " + ioex.getMessage());
+                alert.showAndWait();
             }
         }
     }
