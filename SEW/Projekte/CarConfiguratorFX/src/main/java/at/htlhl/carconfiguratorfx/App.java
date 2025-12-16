@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class App extends Application {
 
@@ -25,7 +27,9 @@ public class App extends Application {
 
         initConfigDir();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("car-view.fxml"));
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("at.htlhl.carconfiguratorfx.car-view");
+
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("car-view.fxml"), resourceBundle);
         Pane carControllViewPane = fxmlLoader.load();
         CarController carController = fxmlLoader.getController();
 
@@ -52,6 +56,8 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        // Force a specific locale (e.g. ENGLISH, GERMAN, ...)
+        Locale.setDefault(new Locale("de", "AT"));
         launch();
     }
 }
