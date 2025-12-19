@@ -162,3 +162,19 @@ try {
 }
 ```
 
+
+
+### Exceptions selbst auslösen oder wertergegeben throw und throws
+
+Mit dem Schlüsselwort throw kann explizit eine Exception innerhalb einer Methode ausgelöst werden, die von der aufrufenden Methode abgefangen werden kann. 
+
+```java
+protected int square Advanced(int value, int lowerBound, int upperBound) throws IllegalArgumentException {
+    if (value < lowerBound || value > upperBound) {
+        throw new Illegal Argument Exception("Out of bounds");
+    }
+    return value * value;
+}
+```
+
+Mit dem Schlüsselwort throws, welches die Methodensignatur ergänzt wird angezeigt, dass diese Methode möglicherweise eine netsprechende Exception auslöst, die von der aufrufenden Mehode abgefangen werden muss (checked exception)
