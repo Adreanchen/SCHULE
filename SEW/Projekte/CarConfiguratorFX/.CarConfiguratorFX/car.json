@@ -1,6 +1,6 @@
 {
-  "manufacturer" : "Porsche",
   "power" : 100,
+  "manufacturer" : "Porsche",
   "range" : 600,
   "type" : "911 Carrera"
 }

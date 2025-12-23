@@ -13,6 +13,7 @@ import javafx.stage.Window;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class CarController {
 
@@ -39,8 +40,10 @@ public class CarController {
 
     private Car model;
 
-    public CarController() {
+    private ResourceBundle resourceBundle;
 
+    public CarController() {
+        resourceBundle = ResourceBundle.getBundle("at.htlhl.carconfiguratorfx.misc");
     }
 
 /*    public void init(Car model) {
@@ -129,13 +132,11 @@ public class CarController {
             } catch (IOException ioex) {
                 System.err.println("Reading config file failed: " + ioex.getMessage());
 
-                Window ownerWindow = ((Node) event.getTarget()).getScene().getWindow();
-
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.initOwner(ownerWindow);
+                alert.initOwner(findParentWindow(event));
                 alert.setTitle(App.APP_NAME);
-                alert.setHeaderText("Load failed");
-                alert.setContentText("During loading the configuration an error occurred: " + ioex.getMessage());
+                alert.setHeaderText(resourceBundle.getString("loadErrorAlert.headerText"));
+                alert.setContentText(resourceBundle.getString("loadErrorAlert.contentText") + ioex.getMessage());
                 alert.showAndWait();
             }
         }
@@ -151,8 +152,17 @@ public class CarController {
 
         try {
             App.JSON_MAPPER.writerWithDefaultPrettyPrinter().writeValue(configFile, model);
-        } catch (IOException ex) {
-            System.err.println("Writing config file failed: " + ex.getMessage());
+
+            throw new IOException("Test save problem");
+        } catch (IOException ioex) {
+            System.err.println("Writing config file failed: " + ioex.getMessage());
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.initOwner(findParentWindow(event));
+            alert.setTitle(App.APP_NAME);
+            alert.setHeaderText(resourceBundle.getString("saveErrorAlert.headerText"));
+            alert.setContentText(resourceBundle.getString("saveErrorAlert.contentText") + ioex.getMessage());
+            alert.showAndWait();
         }
 
     }
@@ -160,5 +170,9 @@ public class CarController {
     @FXML
     protected void tuneAction(ActionEvent event) {
         System.out.println("Tune clicked ... " + event.getSource());
+    }
+
+    private Window findParentWindow(ActionEvent event) {
+        return ((Node) event.getTarget()).getScene().getWindow();
     }
 }
