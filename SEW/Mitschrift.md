@@ -169,9 +169,9 @@ try {
 Mit dem Schlüsselwort throw kann explizit eine Exception innerhalb einer Methode ausgelöst werden, die von der aufrufenden Methode abgefangen werden kann. 
 
 ```java
-protected int square Advanced(int value, int lowerBound, int upperBound) throws IllegalArgumentException {
+protected int squareAdvanced(int value, int lowerBound, int upperBound) throws IllegalArgumentException {
     if (value < lowerBound || value > upperBound) {
-        throw new Illegal Argument Exception("Out of bounds");
+        throw new IllegalArgumentException("Out of bounds");
     }
     return value * value;
 }
