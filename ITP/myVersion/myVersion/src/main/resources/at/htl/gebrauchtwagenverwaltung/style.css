@@ -1,0 +1,115 @@
+.root {
+    -fx-background-color: #d7d9d7;
+    -fx-font-family: "Segoe UI", "Arial";
+}
+
+/* Header */
+.hbox {
+    -fx-background-radius: 8;
+}
+
+VBox > HBox {
+    -fx-background-color: #a7ada5;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.2, 0, 2);
+}
+
+Label {
+    -fx-text-fill: #2b2b2b;
+}
+
+/* TextFields */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #b0b3af;
+    -fx-border-radius: 6;
+    -fx-padding: 8;
+    -fx-border-width: 1.5;
+}
+
+.text-field:focused {
+    -fx-border-color: #4a7c59;
+    -fx-effect: dropshadow(gaussian, rgba(74, 124, 89, 0.3), 8, 0.3, 0, 0);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #697c61;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 14;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0.2, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #697c61;
+}
+
+/* RadioButton */
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2a2a2a;
+}
+
+.radio-button .radio {
+    -fx-background-color: white;
+    -fx-border-color: #6b6b6b;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-padding: 3px;
+}
+
+/* TableView */
+
+.table-view {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #b0b3af;
+    -fx-padding: 4;
+}
+
+.table-view .column-header {
+    -fx-background-color: #697c61;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-radius: 4;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f4f4f4;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4a7c59;
+    -fx-text-fill: white;
+}
+/* Rounded column header ends */
+.table-view .column-header-background {
+    -fx-background-color: #697c61;
+    -fx-background-radius: 8 8 8 8; /* top-left, top-right, bottom-right, bottom-left */
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* einzelne Header-Zellen transparent, damit die Hintergrund-Rundung sichtbar ist */
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Label beibehalten */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 12;
+}

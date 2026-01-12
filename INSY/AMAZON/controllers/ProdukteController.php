@@ -42,6 +42,7 @@ class ProdukteController extends Controller
     {
         $searchModel = new ProdukteSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $dataProvider->query->joinWith('lieferanten');
 
         return $this->render('index', [
             'searchModel' => $searchModel,

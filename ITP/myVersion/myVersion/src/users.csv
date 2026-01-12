@@ -1,0 +1,11 @@
+username,password,email,adminRights
+mattsi,einfach,mattsia@gmail.com,true
+adrian,schwer,adria@gmail.com,true
+trixi,password,trix@gmail.com,true
+sebastian,pass,seb@gmail.com,true
+david,katzen,dav@gmail.com,true
+timi,hund,timm@gmail.com,false
+sophia,mama,soph@gmail.com,false
+sara,klein,sara@gmail.com,false
+beni,gross,ben@gmail.com,false
+klara,snap,klara@gmail.com,false
