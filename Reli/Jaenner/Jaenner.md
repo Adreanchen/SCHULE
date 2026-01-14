@@ -27,3 +27,15 @@
   + Hedonismus: Gut ist, was Lust verursacht. 
   + Deontologie: Gut ist, was Pflicht ist. 
   + Teleologie: Gut ist, wenn das Ziel gut ist. 
+
+## Ethisch Argumentieren
+
+Eigene Beispielsituation + 5 unterschiedliche Argumente / Entscheidungen in dieser Situation
+
+Während einem match (Fußball, Handball) jemanden verletzten in hinsicht, dass es für dein Team etwas gebracht hat. 
+
++ Christlich: nein, ich verletze ja einen anderen Menschen (chrislich gesehen egal ob es mir nützlich ist im nachhinein ich sollte/(darf) es nicht machen)
++ Utilitaristisch: ja, es gibt mir einen Vorteil
++ Hedonistisch: kommt aufs spiel drauf an
++ Deontologisch: ja (für mein Team), ansonsten gebe ich meinem Gegner einen Vorteil (will ich ja nicht)
++ Teleologisch: ja, ich und mein Team profitieren davon im sinne von gewinnen
