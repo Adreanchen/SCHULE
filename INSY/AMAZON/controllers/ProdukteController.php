@@ -38,17 +38,28 @@ class ProdukteController extends Controller
      *
      * @return string
      */
+
     public function actionIndex()
     {
         $searchModel = new ProdukteSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+
+        // eager load Lieferanten relation without executing the query
         $dataProvider->query->joinWith('lieferanten');
+
+        // apply text filter only when provided (uses LIKE; use ->where for exact match)
+        if (!empty($searchModel->text)) {
+            $dataProvider->query->andFilterWhere(['like', 'Produktname', $searchModel->text]);
+            $dataProvider->query->orFilterWhere(['like', 'ProduktID', $searchModel->text]);
+            $dataProvider->query->orFilterWhere(['like', 'Produktkategorie', $searchModel->text]);
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
+
 
     /**
      * Displays a single Produkte model.

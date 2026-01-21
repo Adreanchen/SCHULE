@@ -38,4 +38,4 @@ Während einem match (Fußball, Handball) jemanden verletzten in hinsicht, dass 
 + Utilitaristisch: ja, es gibt mir einen Vorteil
 + Hedonistisch: kommt aufs spiel drauf an
 + Deontologisch: ja (für mein Team), ansonsten gebe ich meinem Gegner einen Vorteil (will ich ja nicht)
-+ Teleologisch: ja, ich und mein Team profitieren davon im sinne von gewinnen
++ Teleologisch: ja, ich und mein Team profitieren davon im sinne von 
