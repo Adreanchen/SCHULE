@@ -10,6 +10,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Window;
+import org.controlsfx.validation.ValidationSupport;
+import org.controlsfx.validation.Validator;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,6 +69,7 @@ public class CarController {
         powerSlider.setMax(Car.MAX_POWER);
 
         initBinding();
+        initValidation();
         assignModelDefaults();
 
         model.manufacturerProperty().addListener(new ChangeListener<String>() {
@@ -82,6 +85,13 @@ public class CarController {
         typeTextField.textProperty().bindBidirectional(model.typeProperty());
         powerSlider.valueProperty().bindBidirectional(model.powerProperty());
         rangeSlider.valueProperty().bindBidirectional(model.rangeProperty());
+    }
+
+    private void initValidation() {
+        ValidationSupport validationSupport = new ValidationSupport();
+        validationSupport.registerValidator(manufacturerTextField,
+                Validator.createEmptyValidator("Manufacturer is required"));
+        saveButton.disabledProperty().and(validationSupport.invalidProperty());
     }
 
     private void assignModelDefaults() {
@@ -127,7 +137,7 @@ public class CarController {
                 Car car = App.JSON_MAPPER.readValue(configFile, Car.class);
                 updateModel(car);
 
-                throw new IOException("Test Fritz Error");
+                // throw new IOException("Test Fritz Error");
                 // updateViewFromModel();
             } catch (IOException ioex) {
                 System.err.println("Reading config file failed: " + ioex.getMessage());
@@ -153,7 +163,7 @@ public class CarController {
         try {
             App.JSON_MAPPER.writerWithDefaultPrettyPrinter().writeValue(configFile, model);
 
-            throw new IOException("Test save problem");
+            // throw new IOException("Test save problem");
         } catch (IOException ioex) {
             System.err.println("Writing config file failed: " + ioex.getMessage());
 
