@@ -18,7 +18,7 @@ use yii\bootstrap5\ActiveForm;
 
     <?= $form->field($model, 'Produktkategorie')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Stueckpreis')->textInput(['maxlength' => true, 'type' => 'number']) ?>
+    <?= $form->field($model, 'Stueckpreis')->textInput(['maxlength' => true,'type'=>'number']) ?>
 
     <?= $form->field($model, 'LieferantenID')->dropDownList($dropdown) ?>
 

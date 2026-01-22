@@ -6,11 +6,12 @@ use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use yii\widgets\ActiveForm;
-
+use yii\bootstrap5\ActiveForm;
 /** @var yii\web\View $this */
-/** @var app\models\ProdukteSearch $searchModel */
+/** @var app\models\ProdukteSearch $searchmodel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
+/** @var app\models\Produkte $produkte array[] */
+/** @var app\models\Produkte $produkt array[] */
 
 $this->title = Yii::t('app', 'Produktes');
 $this->params['breadcrumbs'][] = $this->title;
@@ -19,65 +20,37 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <div class="me-auto d-flex mb-3">
+    <p>
         <?= Html::a(Yii::t('app', 'Create Produkte'), ['create'], ['class' => 'btn btn-success']) ?>
-    </div>
+    </p>
+    <?php $form = ActiveForm::begin(); ?>
+    <?= $form->field($searchmodel, 'text')->textInput() ?>
+    <?= Html::submitButton(Yii::t('app', 'search'), ['class' => 'btn btn-success']) ?>
+    <?php \yii\bootstrap5\ActiveForm::end() ?>
 
-
-    <?php
-    // show up to 5 cards
-    $models = array_slice($dataProvider->getModels(), 0, sizeof($dataProvider->getModels()));
-    if (!empty($models)): ?>
-        <div class="row g-4 mb-4">
-            <?php foreach ($models as $model): ?>
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 d-flex flex-column">
-                        <div class="card-header text-muted">
-                            Lieferant: <?= Html::encode($model->lieferanten ? $model->lieferanten->Lieferantenname : 'N/A') ?>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-2"><?= Html::encode($model->Produktname) ?></h5>
-                            <p class="card-text mb-1">
-                                <strong>Kategorie:</strong> <?= Html::encode($model->Produktkategorie) ?></p>
-                            <p class="card-text mb-2"><strong>Preis:</strong> <?= Html::encode($model->Stueckpreis) ?>
-                            </p>
-                        </div>
-                        <div class="card-footer mt-auto">
-                            <?= Html::a(Yii::t('app', 'View'), ['view', 'ProduktID' => $model->ProduktID], ['class' => 'btn btn-primary me-2']) ?>
-                            <?= Html::a(Yii::t('app', 'Edit'), ['update', 'ProduktID' => $model->ProduktID], ['class' => 'btn btn-secondary me-2']) ?>
-                            <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'ProduktID' => $model->ProduktID], [
-                                    'class' => 'btn btn-danger',
-                                    'data' => ['method' => 'post', 'confirm' => Yii::t('app', 'Are you sure?')],
-                            ]) ?>
-                        </div>
-                    </div>
+    <br>
+    <div class="row g-3">
+    <?php foreach ($produkte as $produkt): ?>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <div class="card-header fs-5 fw-semibold">
+                    <b>ProduktID:</b>
+                    <?= $produkt->ProduktID?>
                 </div>
-            <?php endforeach; ?>
+                <div class="card-body">
+                    <b>Produkt:</b><br>
+                    <?= $produkt->Produktname?>
+                </div>
+                <div class="card-footer">
+                    <b>Lieferant:</b><br>
+                    <?= $produkt->lieferanten->Lieferantenname?>
+                </div>
+                <div class="card-footer">
+                    <?= \yii\bootstrap5\Html::a($produkt->iconUpdate(), Url::to(['produkte/update', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-primary']) ?>
+                    <?= \yii\bootstrap5\Html::a($produkt->iconDelete(), Url::to(['produkte/delete', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-danger', 'data-method' => 'post', 'data-confirm' => 'Do you want to delete the item surely???']) ?>
+                </div>
+            </div>
         </div>
-    <?php endif; ?>
-
-    <?php Pjax::begin(); ?>
-
-    <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
-            'columns' => [
-                    ['class' => 'yii\grid\SerialColumn'],
-
-                    'ProduktID',
-                    'Produktname',
-                    'Produktkategorie',
-                    'Stueckpreis',
-                    'LieferantenID',
-                    [
-                            'class' => ActionColumn::className(),
-                            'urlCreator' => function ($action, Produkte $model, $key, $index, $column) {
-                                return Url::toRoute([$action, 'ProduktID' => $model->ProduktID]);
-                            }
-                    ],
-            ],
-    ]); ?>
-
-    <?php Pjax::end(); ?>
-
+    <?php endforeach;?>
+    </div>
 </div>

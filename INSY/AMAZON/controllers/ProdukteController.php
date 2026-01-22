@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Lieferanten;
 use app\models\Produkte;
 use app\models\ProdukteSearch;
+use yii\base\DynamicModel;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -38,28 +39,31 @@ class ProdukteController extends Controller
      *
      * @return string
      */
-
     public function actionIndex()
     {
-        $searchModel = new ProdukteSearch();
-        $dataProvider = $searchModel->search($this->request->queryParams);
+        $searchmodel = new DynamicModel();
+        $searchmodel->addRule(['text'], 'string', ['max' => 120]);
 
-        // eager load Lieferanten relation without executing the query
-        $dataProvider->query->joinWith('lieferanten');
+        $searchmodel->load(\Yii::$app->request->post());
 
-        // apply text filter only when provided (uses LIKE; use ->where for exact match)
-        if (!empty($searchModel->text)) {
-            $dataProvider->query->andFilterWhere(['like', 'Produktname', $searchModel->text]);
-            $dataProvider->query->orFilterWhere(['like', 'ProduktID', $searchModel->text]);
-            $dataProvider->query->orFilterWhere(['like', 'Produktkategorie', $searchModel->text]);
+        $produktequery = Produkte::find()->joinWith('lieferanten');
+
+        if($searchmodel->text != null) {
+            $produktequery->where(['LIKE','Produktname', $searchmodel->text]);
+            $produktequery->orWhere(['LIKE','Produktkategorie', $searchmodel->text]);
+            $produktequery->orWhere(['LIKE','ProduktID', $searchmodel->text]);
+            $produktequery->orWhere(['LIKE','Lieferantenname', $searchmodel->text]);
         }
+        /*$searchModel = new ProdukteSearch();
+        $dataProvider = $searchModel->search($this->request->queryParams)*/
+
+        $produkte = $produktequery->all();
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'produkte' => $produkte,
+            'searchmodel' => $searchmodel
         ]);
     }
-
 
     /**
      * Displays a single Produkte model.
@@ -83,9 +87,6 @@ class ProdukteController extends Controller
     {
         $model = new Produkte();
 
-        $lieferanten = Lieferanten::find()->all();
-        $lfdropdown = ArrayHelper::map($lieferanten, "LieferantenID", "Lieferantenname");
-
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'ProduktID' => $model->ProduktID]);
@@ -96,7 +97,7 @@ class ProdukteController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'dropdown' => $lfdropdown,
+            'dropdown' => $this->getDropdown(),
         ]);
     }
 
@@ -117,6 +118,7 @@ class ProdukteController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'dropdown' => $this->getDropdown(),
         ]);
     }
 
@@ -148,5 +150,16 @@ class ProdukteController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+
+    /**
+     * Liefert Dropdown für Form
+     * @return array
+     */
+    private function getDropdown()
+    {
+        $lieferanten = Lieferanten::find()->all();
+        $lfdropdown = ArrayHelper::map($lieferanten, "LieferantenID", "Lieferantenname");
+        return $lfdropdown;
     }
 }
