@@ -36,27 +36,37 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         'brandUrl' => Yii::$app->homeUrl,
         'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
     ]);
+    
+    $navItems = [
+        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Produkte', 'url' => ['/produkte/index']],
+    ];
+
+    if (!Yii::$app->user->isGuest && Yii::$app->user->identity->role === 'admin') {
+        $navItems[] = ['label' => 'Kunde', 'url' => ['/kunden/index']];
+        $navItems[] = ['label' => 'Lieferanten', 'url' => ['/lieferanten/index']];
+    }
+
+    if (Yii::$app->user->isGuest) {
+        $navItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+    } else {
+        $navItems[] = '<li class="nav-item">'
+            . Html::beginForm(['/site/logout'])
+            . Html::submitButton(
+                'Logout (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'nav-link btn btn-link logout']
+            )
+            . Html::endForm()
+            . '</li>';
+    }
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Kunde', 'url' => ['/kunden/index']],
-            ['label' => 'Produkte', 'url' => ['/produkte/index']],
-            ['label' => 'Lieferanten', 'url' => ['/lieferanten/index']],
-            Yii::$app->user->isGuest
-                ? ['label' => 'Login', 'url' => ['/site/login']]
-                : '<li class="nav-item">'
-                    . Html::beginForm(['/site/logout'])
-                    . Html::submitButton(
-                        'Logout (' . Yii::$app->user->identity->username . ')',
-                        ['class' => 'nav-link btn btn-link logout']
-                    )
-                    . Html::endForm()
-                    . '</li>'
-        ]
+        'items' => $navItems
     ]);
+
     NavBar::end();
     ?>
 </header>

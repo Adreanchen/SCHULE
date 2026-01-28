@@ -45,10 +45,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     <b>Lieferant:</b><br>
                     <?= $produkt->lieferanten->Lieferantenname?>
                 </div>
-                <div class="card-footer">
-                    <?= \yii\bootstrap5\Html::a($produkt->iconUpdate(), Url::to(['produkte/update', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-primary']) ?>
-                    <?= \yii\bootstrap5\Html::a($produkt->iconDelete(), Url::to(['produkte/delete', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-danger', 'data-method' => 'post', 'data-confirm' => 'Do you want to delete the item surely???']) ?>
-                </div>
+                <?php if(!Yii::$app->user->isGuest && Yii::$app->user->identity->role === 'admin'): ?>
+                    <div class="card-footer">
+                        <?= \yii\bootstrap5\Html::a($produkt->iconView(), Url::to(['produkte/view', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-info']) ?>
+                        <?= \yii\bootstrap5\Html::a($produkt->iconUpdate(), Url::to(['produkte/update', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-primary']) ?>
+                        <?= \yii\bootstrap5\Html::a($produkt->iconDelete(), Url::to(['produkte/delete', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-danger', 'data-method' => 'post', 'data-confirm' => 'Do you want to delete the item surely???']) ?>
+                    </div>
+                <?php elseif(!Yii::$app->user->isGuest && Yii::$app->user->identity->role === 'user'): ?>
+                    <div class="card-footer">
+                        <?= \yii\bootstrap5\Html::a($produkt->iconView(), Url::to(['produkte/view', 'ProduktID' => $produkt->ProduktID]), ['class' => 'btn btn-info']) ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     <?php endforeach;?>

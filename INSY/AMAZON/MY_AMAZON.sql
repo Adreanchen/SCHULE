@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS MYAMAZON;
 CREATE DATABASE MYAMAZON;
 
 USE MYAMAZON;
@@ -45,9 +46,9 @@ CREATE TABLE Bestellpositionen (
 );
 
 CREATE TABLE User (
-	UserID INT PRIMARY KEY AUTO_INCREMENT,
-	Benutzername varchar(255),
-	Passwort varchar(255),
-	Auth_key varchar(255),
-	Access_token varchar(255)
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Benutzername VARCHAR(255),
+    Passwort VARCHAR(255),
+    Auth_Key VARCHAR(255),
+    Access_Token VARCHAR(255)
 );
