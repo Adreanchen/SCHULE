@@ -164,7 +164,7 @@ try {
 
 
 
-### Exceptions selbst auslösen oder wertergegeben throw und throws
+### Exceptions selbst auslösen oder weitergegeben throw und throws
 
 Mit dem Schlüsselwort throw kann explizit eine Exception innerhalb einer Methode ausgelöst werden, die von der aufrufenden Methode abgefangen werden kann. 
 
@@ -178,3 +178,31 @@ protected int squareAdvanced(int value, int lowerBound, int upperBound) throws I
 ```
 
 Mit dem Schlüsselwort throws, welches die Methodensignatur ergänzt wird angezeigt, dass diese Methode möglicherweise eine netsprechende Exception auslöst, die von der aufrufenden Mehode abgefangen werden muss (checked exception)
+
+# Software testen
+
+Um eine hohe Qualität der auszuliefernden Softwar sicherzustellen, ist es notwendig diese intensiv zu testen. 
+
+## White-Box-Test vs. Black-Box-Test 
+
+<img src="White_Black_Box.png" alt="bild von White und Black box" style="zoom:150%;" >
+
+### White Box Test: 
+
+Das Testen erfolgt mit Blick auf die implementierte Logik.
+
+* **Vorteile:** 
+  * Die interne Funktionsweise kann komplett getestet werden
+  * Gut automatisiert duch Testtools (z.B.: JUnit)
+* **Nachteile:** 
+  * Eventuell Testen um "Fehler herum"
+  * Erfüllung der gesamten Spezifikation wird nicht überprüft
+
+### Black Box Test:
+
+* **Vorteile:**
+  * gute Verfikation der gesamten Anwendung
+  * Testen ist unabhängig von der Programmiersprache
+* **Nachteile:**
+  * Neuer Code wird nur durch Zufall gestestet
+  * Schlecht/Schwer automatisierbar
