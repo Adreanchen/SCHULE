@@ -1,5 +1,3 @@
-# Jänner
-
 ## Ethischer Dreischritt - Sehen, Urteilen, Handeln
 
 * **Sehen: **Wahr- und Ernstnehmen der Menschen

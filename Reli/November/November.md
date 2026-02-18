@@ -1,6 +1,4 @@
-# November
-
-## Menschenwürdiges Sterben
+# Menschenwürdiges Sterben
 
 ### Euthanasie/Sterbehilfe
 

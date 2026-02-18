@@ -1,6 +1,4 @@
-# Dezember
-
-## Dietrich Bonhoeffer
+# Dietrich Bonhoeffer
 
 [**Dietrich Bonhoeffer**](./1_Bonkhoeffer_Aufgaben.pdf)
 

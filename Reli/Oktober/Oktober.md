@@ -1,6 +1,5 @@
-# Oktober
+# Bioethik und Humangenetik
 
-## Bioethik und Humangenetik
 * Bioethik: ethische Fragestellung in Bezug auf das menschliche Leben
 * Humangeneetik: erforscht erbliche Grundlagen und Krankheiten
 

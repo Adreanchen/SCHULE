@@ -1,6 +1,4 @@
-# Februar
-
-## Kirchengeschichte
+# Kirchengeschichte
 
 **Ab 0-100 Urchristentum**
 
@@ -42,7 +40,7 @@
 
 **Protestantische Kirchen:** Als Resultat der Reformation entstehen die evangelischen Glaubensgemeinschaften, die sich vom Papsttum ablösen.
 
-![Bild von Kirchengeschichte](Kirchengeschichte.png)
+<img src="Kirchengeschichte.png" alt ="Bild von Kirchengeschichte" style="zoom: 45%;">
 
 ## [2_Kirchengeschichte_Überblick.pdf](2_Kirchengeschichte_Überblick.pdf)
 
@@ -56,3 +54,53 @@
 **Hilferuf nach Rom -> Kreuzzüge**
 
 * (1493: Eroberung Konstantinopel durch Osmanen)
+
+## Investiturstreit: 1075 - 1122:
+
+* **Was beduetet Investitur?** Die feierliche Einsetzung eines Geistlichen (Bischof/Abt) in sein Amt.
+* **Worüber wurde "gestritten"?** Darf der Kaiser bestimmen, wer Bischof wird, oder nur der Papst?
+* **Wer war betreiligt?** Hauptsächlich Papst Gregor VII. und Kaiser Heinrich IV.
+* **Wie ist es ausgegangen?** 
+  * Papst hat religiöse Macht
+  * Kaiser hat weltliche Macht
+
+**[3_Kreuzzüge](3_Kreuzzüge.pdf):** 
+
+**zusammenfassung (vom Text):** 
+
+* Er schildert drastische Gräueltaten „gottloser“ Völker an Christen und die Entweihung heiliger Stätten in Jerusalem.
+* Er appelliert an den Kampfgeist und die religiöse Ehre der Ritter, diese „Schmach“ zu rächen.
+* Der Kreuzzug soll die internen Kriege in Europa beenden, die durch Übervölkerung und Ressourcenmangel entstehen.
+* Er verspricht den Teilnehmern ein fruchtbares Land („Milch und Honig“) und die vollständige Vergebung ihrer Sünden.
+
+**[4_KreuzzügeII](4_KreuzzügeII.pdf):** 
+
+**Aus Sicht eines Kreuzritters**
+
+- **Mission:** Befreiung des Heiligen Grabes von „Ungläubigen“.
+- **Motivation:** Vollständiger Erlass aller Sünden (Ablass) und ritterliche Ehre.
+- **Ziel:** Suche nach einem besseren Leben und Reichtum im „Gelobten Land“.
+
+**Aus Sicht eines Arabers**
+
+- **Invasion:** Wahrnehmung der „Franken“ als grausame, unprovozierte Eindringlinge.
+- **Verteidigung:** Heiliger Krieg (*Dschihad*) zum Schutz der eigenen Heimat und Religion.
+- **Kultur:** Befremden über die (aus ihrer Sicht) ungebildeten und fanatischen „Barbaren“.
+
+| so wies im pdf steht | richtige Reihenfolge |
+| -------------------- | -------------------- |
+| 1                    | 1                    |
+| 2                    | 4                    |
+| 3                    | 5                    |
+| 4                    | 7                    |
+| 5                    | 2                    |
+| 6                    | 3                    |
+| 7                    | 6                    |
+
+* **Wissenstransfer:** Einzug der Naturwissenschaften in den Westen, wie z. B. Algebra und Algorithmus.
+* **Wirtschaft & Sprache:** Übernahme arabischer Begriffe für den Handel, darunter Bazar, Scheck und Tarif.
+* **Handwerk & Kunst:** Fortschritte in der Metall-, Textil- und Keramikverarbeitung sowie bei künstlerischen Ornamenten.
+* **Militärtechnik:** Austausch bei Festungsbau und Rüstung (z. B. gepanzerte Reiter).
+* **Kulturelle Begegnung:** Entstehung von „Kontaktzonen“ (besonders in Süditalien/Sizilien), die den Austausch zwischen Händlern und Religionen förderten.
+* **Identität:** Die Konfrontation mit der fremden Kultur half beiden Seiten bei der eigenen „Selbstfindung“.
+
