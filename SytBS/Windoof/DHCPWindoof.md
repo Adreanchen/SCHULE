@@ -20,29 +20,39 @@ in einer powershell (ob über ssh oder ned is egal)
 
 * **DHCP-Server installieren**
 
-  ```power
+  ```powershell
   Install-WindowsFeature -Name DHCP -IncludeManagementTools
   ```
 
 * Pool erstellen: 
 
-  ```power
+  ```powershell
   Add-DhcpServerv4Scope -Name <name> -StartRange 10.0.5.50 -EndRange 10.0.5.150 -SubnetMask 255.255.255.0 -State Active
   Get-DhcpServerv4Scope
   ```
 
 * DNS-Server setzen `-Optionid 6`
 
-  ```power
+  ```powershell
   Set-DhcpServerv4OptionValue -Scopeid 10.0.5.0 -Optionid 6 -Value "8.8.8.8"
   Get-DhcpServerv4OptionValue -Scopeid 10.0.5.0
   ```
 
 * Default-gateway setzen `-Optionid 3`
 
-  ```power
+  ```powershell
   Set-DhcpServerv4OptionValue -Scopeid 10.0.5.0 -Optionid 3 -Value "10.0.5.2"
   Get-DhcpServerv4OptionValue -Scopeid 10.0.5.0
   ```
 
-* 
+* Reservations
+
+  ```powershell
+  Add-DhcpServerv4Reservation -Scopeid 10.0.5.0 -Clientid (Get-DhcpServerv4Lease -Scopeid 10.0.5.0).Clientid -IPAddress 10.0.5.25 -Name "debianClient1"
+  ```
+
+* falls man einen fehler gemacht hat dann kann man das ganze scope so löschen
+
+  ```powershell
+  Remove-DhcpServerv4Scope -Scopeid 10.0.5.0
+  ```
