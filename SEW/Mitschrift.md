@@ -206,3 +206,45 @@ Das Testen erfolgt mit Blick auf die implementierte Logik.
 * **Nachteile:**
   * Neuer Code wird nur durch Zufall gestestet
   * Schlecht/Schwer automatisierbar
+
+## White -Box Test mit JUnit
+
+Junit (Java Unit) ist ein weit verbreitetes Framwork, das sich zum Standardwerkzeug für automatisierte Unit-Tests von Klassen und Methoden in Java - Programmen etabliert hat. Meist wird für eine zu testende Klasse eine Testklasse erstellt, in der der Testablauf mit speziell annotierten Methoden gesteuert wird. 
+
+```java
+@BeforeAll
+static void setupServer() {
+    // Wird einmal aufgerufen, wenn die KLasse für
+    // den Test initialisiert wird
+    // Hier wird üblicherweise das gesetzt, was teuer
+    // im Aufbau ist z.B. eine Datenbankverbindung
+    // Methode muss static sein
+}
+
+@BeforeEach
+void setup() {
+    // Wird immer vor einer Testmethode aufgerufen
+}
+
+@Test
+void myTest() {
+    // Testmethode (beliebig viele)
+}
+
+@AfterEach
+void tearDown() {
+    // Wird immer nach einer Testmethode aufgerufen
+}
+
+@AfterAll
+static void tearDownServer() {
+    // Wird aufgerufen, wenn alle Tests für die Klasse abgeschlossen sind
+    // Methode muss static sein
+}
+```
+
+Innerhalb der testklassen können diverse assert-Methoden einen Fehler auslösen, wenn ein aktueller Wert nicht so wie der gewünschte ist. 
+
+z.B. assertEquals(), assertTrue(), ...
+
+Die Methode fail() löst aktiv einen Fehler aus, wenn ein nicht gewünschter Wert
