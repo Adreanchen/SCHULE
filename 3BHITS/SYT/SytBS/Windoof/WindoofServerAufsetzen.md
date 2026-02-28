@@ -5,6 +5,7 @@
   + windoof + 2025
   + location wo das file liegen soll also die vm
   + size 60 GB
+  + customize hardware (da kommt der punkt wo du das ISO image reingibst)
   + leistung -> 4GB min RAM | mehr als 1-2 Threads
   + bei cd über das ISO image !!!
   + finish

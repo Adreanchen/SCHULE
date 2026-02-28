@@ -62,7 +62,7 @@
 ## Software Selection
 - **Select and Install Software**
 - Security updates: `automatically install`
-- Participate in the package usage survey: `Yes`
+- Participate in the package usage survey: `no`
 - Software selection:
   - Deselect everything except **Standard system utilities**
 - Confirmation:
