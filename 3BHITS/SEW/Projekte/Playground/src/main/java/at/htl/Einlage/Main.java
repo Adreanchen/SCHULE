@@ -3,6 +3,22 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        // keineAhnung();
+
+        System.out.println(fib(50));
+    }
+
+    public static int fib(int n) {
+        if (n == 1) {
+            return 1;
+        } else if (n == 2) {
+            return 1;
+        } else {
+            return fib(n-1) + fib(n-2);
+        }
+    }
+
+    private static void keineAhnung() {
         SparEinlage[] SE = new SparEinlage[11];
         Random random = new Random();
         float gesamtZinsen = 0.0f;

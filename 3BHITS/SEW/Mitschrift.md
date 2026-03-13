@@ -248,3 +248,34 @@ Innerhalb der testklassen können diverse assert-Methoden einen Fehler auslösen
 z.B. assertEquals(), assertTrue(), ...
 
 Die Methode fail() löst aktiv einen Fehler aus, wenn ein nicht gewünschter Wert
+
+# Rekursion
+
+Rekursion ist eine Methode, bei der eine Funktion sich selbst aufruft. Diese Vorgehensweise bietet eine Möglichkeit, komplizierte Probleme in einfachere Teilprobleme zu zerlegen, die leichter zu lösen sind. 
+
+Beispiel: Fibonacci - Zahlen
+
+Die Fibonacci - Zahlen lassen sich hervorragend rekursiv definieren. 
+$$
+F_n = F_{n-1} + F_{n-2}
+$$
+Es ergibt sich für die ersten n folgender Werteverlauf:
+
+| n      | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+| ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| fib(n) | 1    | 1    | 2    | 3    | 5    | 8    | 13   | 21   |
+
+Berechnet die Fibonacci Stelle n:
+
+```java
+public int fib(int n) {
+    if (n == 1) {
+        return 1;
+    } else if (n == 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
+    }
+}
+```
+
