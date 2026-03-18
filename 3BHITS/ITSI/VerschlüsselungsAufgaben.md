@@ -35,3 +35,73 @@ $$
 $$
 K = \frac{120 \cdot 119}{2} = \frac{14.280}{2} = 7.140
 $$
+
+## 6.4
+
+Das Sicherheitsniveau asymmetrischer Algorithmen kann erhöht werden, indem größere Bitlängen gewählt werden. Allerdings wirken sich die längeren Parameter direkt auf die Laufzeit der Algorithmen aus. Den Zusammenhang zwischen Ausführungszeit und Sicherheitsniveau wird in dieser Aufgabe untersucht.
+
+Ein Web-Server für einen Online-Shop kann entweder **RSA** oder **ECC** für das Erstellen von digitalen Signaturen verwenden. Die Signaturzeit für **RSA-1024** beträgt **15,7 ms** und für **ECC 1,3 ms**.
+
+1. Wie hoch ist die Laufzeit für eine RSA-Signatur, wenn die Bitlänge aus Sicherheitsgründen von 1024 Bit auf 3072 Bit erhöht wird?
+2. Wie erhöht sich die Laufzeit für RSA bei einer Erhöhung von 1024 Bit auf 15.360 Bit?
+3. Berechnen Sie die Laufzeiten für ECC, wenn ECC das gleiche Sicherheitsniveau wie RSA-3072 und RSA-15.360 bieten soll.
+4. Beschreiben Sie das unterschiedliche Verhalten von RSA und ECC, wenn das Sicherheitsniveau erhöht wird.
+
+**Hinweis:** Die Rechenlaufzeit von RSA und ECC wächst kubisch mit der Bitlänge. Tab. 6.1 gibt die Sicherheitsniveaus von ECC und RSA an.
+
+### 1. RSA: 1024 Bit $\to$ 3072 Bit
+
+$$
+T_{RSA,3072} = 15,7 \text{ ms} \cdot \left( \frac{3072}{1024} \right)^3
+$$
+
+$$
+T_{RSA,3072} = 15,7 \text{ ms} \cdot 3^3 = 15,7 \text{ ms} \cdot 27
+$$
+
+$$
+T_{RSA,3072} = \mathbf{423,9 \text{ ms}}
+$$
+
+### 2. RSA: 1024 Bit $\to$ 15.360 Bit
+
+$$
+T_{RSA,15360} = 15,7 \text{ ms} \cdot \left( \frac{15360}{1024} \right)^3
+$$
+
+$$
+T_{RSA,15360} = 15,7 \text{ ms} \cdot 15^3 = 15,7 \text{ ms} \cdot 3375
+$$
+
+$$
+T_{RSA,15360} = \mathbf{52.987,5 \text{ ms}} \approx \mathbf{53 \text{ s}}
+$$
+
+### 3. ECC (Äquivalente Sicherheitsniveaus)
+
+**Für Niveau RSA-3072 ($\approx$ ECC-256):**
+$$
+T_{ECC,256} = 1,3 \text{ ms} \cdot \left( \frac{256}{160} \right)^3
+$$
+
+$$
+T_{ECC,256} = 1,3 \text{ ms} \cdot 1,6^3 = 1,3 \text{ ms} \cdot 4,096
+$$
+
+$$
+T_{ECC,256} \approx \mathbf{5,32 \text{ ms}}
+$$
+
+**Für Niveau RSA-15360 ($\approx$ ECC-512):**
+$$
+T_{ECC,512} = 1,3 \text{ ms} \cdot \left( \frac{512}{160} \right)^3
+$$
+
+$$
+T_{ECC,512} = 1,3 \text{ ms} \cdot 3,2^3 = 1,3 \text{ ms} \cdot 32,768
+$$
+
+$$
+T_{ECC,512} \approx \mathbf{42,60 \text{ ms}}
+$$
+
